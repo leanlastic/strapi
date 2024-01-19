@@ -54,7 +54,7 @@ const DynamicComponent = ({
   dynamicComponentsByCategory = {},
   onAddComponent,
 }: DynamicComponentProps) => {
-  const [isOpen, setIsOpen] = React.useState(true);
+  const [isOpen, setIsOpen] = React.useState(false);
   const { formatMessage } = useIntl();
   const { getComponentLayout } = useContentTypeLayout();
   const { modifiedData } = useCMEditViewDataManager();
@@ -248,8 +248,8 @@ const DynamicComponent = ({
 };
 
 const ActionsFlex = styled(Flex)`
-  /* 
-    we need to remove the background from the button but we can't 
+  /*
+    we need to remove the background from the button but we can't
     wrap the element in styled because it breaks the forwardedAs which
     we need for drag handler to work on firefox
   */
